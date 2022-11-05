@@ -1,0 +1,103 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2636
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;\f1\fnil\fcharset0 Menlo-Bold;\f2\fnil\fcharset0 Menlo-BoldItalic;
+\f3\fnil\fcharset0 Menlo-Italic;}
+{\colortbl;\red255\green255\blue255;\red63\green127\blue95;\red127\green0\blue85;\red106\green62\blue62;
+\red0\green0\blue192;\red42\green0\blue255;}
+{\*\expandedcolortbl;;\csgenericrgb\c24706\c49804\c37255;\csgenericrgb\c49804\c0\c33333;\csgenericrgb\c41569\c24314\c24314;
+\csgenericrgb\c0\c0\c75294;\csgenericrgb\c16471\c0\c100000;}
+\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx560\tx1120\tx1680\tx2240\tx2800\tx3360\tx3920\tx4480\tx5040\tx5600\tx6160\tx6720\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 \
+\pard\pardeftab720\partightenfactor0
+\cf2 /*\cf0 \
+\cf2  * \ul Santana\ulnone , \ul Isory\ulnone  \cf0 \
+\cf2  * 09/04/2022\cf0 \
+\cf2  * CST 3513 D312[19866]\cf0 \
+\cf2  * Prof.Cabo, \ul Candido\cf0 \ulnone \
+\cf2                           * Assignment #1\cf0 \
+\cf2                           \cf0 \
+\cf2 Problem 4. Write a program that reads an investment amount, annual interest rate, and the number\cf0 \
+\cf2 of years, and displays the future investment value using the following formula:\cf0 \
+\
+\cf2 futureInvestmentValue = investmentAmount (1 + (annualInterestRate/12))^numberOfYears*12\cf0 \
+\
+\cf2 For example, if you enter amount 1000, annual interest rate 3.25%, and number of years 1, \cf0 \
+\cf2 the future investment value is 1032.98. \cf0 \
+\
+\cf2 */\cf0 \
+\
+\pard\pardeftab720\partightenfactor0
+
+\f1\b \cf3 import
+\f0\b0 \cf0  java.util.Scanner;\
+	\
+
+\f1\b \cf3 public
+\f0\b0 \cf0  
+\f1\b \cf3 class
+\f0\b0 \cf0  problem_4 \{ \cf2 //beginning of the class\cf0 \
+	\
+		
+\f1\b \cf3 public
+\f0\b0 \cf0  
+\f1\b \cf3 static
+\f0\b0 \cf0  
+\f1\b \cf3 void
+\f0\b0 \cf0  main(String[] \cf4 args\cf0 ) \{\
+			\cf2 //beginning of a method \cf0 \
+			\
+			Scanner \cf4 \ul \ulc4 input\cf0 \ulnone  = 
+\f1\b \cf3 new
+\f0\b0 \cf0  Scanner(System.
+\f2\i\b \cf5 in
+\f0\i0\b0 \cf0 );\
+\
+			\cf2 // Request the user to enter the investment amount\cf0 \
+			System.
+\f2\i\b \cf5 out
+\f0\i0\b0 \cf0 .print(\cf6 "Enter investment amount: "\cf0 );\
+			
+\f1\b \cf3 double
+\f0\b0 \cf0  \cf4 amount\cf0  = \cf4 input\cf0 .nextDouble();\
+			\
+			\cf2 // Annual interest rate \cf0 \
+			System.
+\f2\i\b \cf5 out
+\f0\i0\b0 \cf0 .print(\cf6 "Enter annual interest rate in percentage: "\cf0 );\
+			
+\f1\b \cf3 double
+\f0\b0 \cf0  \cf4 monthlyInterestRate\cf0  = \cf4 input\cf0 .nextDouble();\
+			\cf4 monthlyInterestRate\cf0  /= 1200;\
+			\
+			\cf2 // Number of years.\cf0 \
+			System.
+\f2\i\b \cf5 out
+\f0\i0\b0 \cf0 .print(\cf6 "Enter number of years: "\cf0 );\
+			
+\f1\b \cf3 int
+\f0\b0 \cf0  \cf4 years\cf0  = \cf4 input\cf0 .nextInt();\
+\
+			\cf2 // Calculate the value of future investments\cf0 \
+			
+\f1\b \cf3 double
+\f0\b0 \cf0  \cf4 futureInvestmentValue\cf0  = \cf4 amount\cf0  * Math.
+\f3\i pow
+\f0\i0 (1 + \cf4 monthlyInterestRate\cf0 , \cf4 years\cf0  * 12);\
+			\
+			\cf2 // Show result\cf0 \
+			System.
+\f2\i\b \cf5 out
+\f0\i0\b0 \cf0 .println(\cf6 "Accumulated value is $"\cf0  + \cf4 futureInvestmentValue\cf0 );\
+	\
+		\
+		\} \cf2 // end of the method \cf0 \
+		\
+	\} \cf2 // end of the class \cf0 \
+\
+\
+\
+\
+\
+\
+}
